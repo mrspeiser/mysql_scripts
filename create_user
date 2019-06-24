@@ -1,0 +1,8 @@
+#!/bin/bash
+echo GRANT ALL PRIVILEGES ON *.* TO \'username\'@\'localhost\' IDENTIFIED BY \'password\'';
+echo GRANT SELECT ON *.* TO \'username\'@\'localhost\';
+
+echo CREATE USER \'matthew\'@\'localhost\'
+echo -e "\tIDENTIFIED BY \'password\';"
+echo "'GRANT ALL ON \*\.\* TO \'matthew\'@\'localhost\'"
+echo 'WITH GRANT OPTION'

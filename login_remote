@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# mysql
+# -u {username} -p {password} \
+# -h {remote server ip or name} -P {port} \
+# --ssl-ca=/sample_dir/rds-combined-ca-bundle.pem -D {DB name}
+
+read -p "username: " username
+read -p "password: " password
+read -p "host URL or IP address: " ip
+read -p "Port: " port
+read -p "path to .pem file: " pem
+read -p "DB name: " db
+
+mysql -u "$username" -p "$password" \
+-h "$ip" -P "$port" \
+# --ssl-ca="$pem" -D "$db"

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+mysql_username="$1"
+ip_address="$2"
+if [[ -z "$1" ]]; then
+	read -p "enter mysql username: " mysql_username
+fi
+
+if [[ -z "$2" ]]; then
+	read -p "enter ip address or host address" ip_address
+fi
+echo "trying to connect to mysql database at host: $ip_address on port 3306 with username: $mysql_username"
+mysql -u "$mysql_username" -p -h "$ip_address"
